@@ -126,7 +126,7 @@ function Ammo:UpdateRoundData(ToolData, Data, GUIData)
 	Data.CasingMass		= (GUIData.ProjVolume - NonCasingVol) * ACF.SteelDensity
 	Data.ProjMass       = Data.FillerMass + Data.CasingMass + LinerMass
 	Data.MuzzleVel      = ACF.MuzzleVelocity(Data.PropMass, Data.ProjMass, Data.Efficiency)
-	Data.BoomFillerMass	= Data.FillerMass * ACF.HEATBoomConvert * ACF.CompBEquivalent -- In TNT equivalent
+	Data.BoomFillerMass	= Data.FillerMass * ACF.HEATBoomConvert * ACF.CompBEquivalent * 1.25 -- In TNT equivalent
 	Data.LinerMass      = LinerMass
 	Data.JetMass        = JetMass
 	Data.JetMinVel      = JetMinVel

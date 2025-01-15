@@ -1,6 +1,6 @@
 local ACF     = ACF
 local Engines = ACF.Classes.Engines
-
+local TorqueFactor = 1.4
 
 Engines.Register("SP", {
 	Name = "Special Engine",
@@ -15,7 +15,7 @@ do -- Special Rotary Engines
 		Fuel		 = { Petrol = true },
 		Type		 = "Wankel",
 		Mass		 = 260,
-		Torque		 = 312,
+		Torque		 = 312 * TorqueFactor,
 		FlywheelMass = 0.11,
 		RPM = {
 			Idle	= 1200,
@@ -36,7 +36,7 @@ do -- Special I2 Engines
 		Fuel		 = { Petrol = true },
 		Type		 = "GenericPetrol",
 		Mass		 = 60,
-		Torque		 = 145,
+		Torque		 = 145 * TorqueFactor,
 		FlywheelMass = 0.085,
 		RPM = {
 			Idle	= 750,
@@ -57,7 +57,7 @@ do -- Special I4 Engines
 		Fuel		 = { Petrol = true },
 		Type		 = "GenericPetrol",
 		Mass		 = 78,
-		Torque		 = 85,
+		Torque		 = 85 * TorqueFactor,
 		FlywheelMass = 0.031,
 		Pitch		 = 0.75,
 		RPM = {
@@ -77,7 +77,7 @@ do -- Special I4 Engines
 		Fuel		 = { Petrol = true },
 		Type		 = "GenericPetrol",
 		Mass		 = 150,
-		Torque		 = 220,
+		Torque		 = 220 * TorqueFactor,
 		FlywheelMass = 0.06,
 		RPM = {
 			Idle	= 950,
@@ -98,7 +98,7 @@ do -- Special V4 Engines
 		Fuel		 = { Petrol = true },
 		Type		 = "GenericPetrol",
 		Mass		 = 92,
-		Torque		 = 156,
+		Torque		 = 156 * TorqueFactor,
 		FlywheelMass = 0.04,
 		RPM = {
 			Idle	= 900,
@@ -119,7 +119,7 @@ do -- Special I6 Engines
 		Fuel		 = { Petrol = true },
 		Type		 = "GenericPetrol",
 		Mass		 = 180,
-		Torque		 = 280,
+		Torque		 = 280 * TorqueFactor,
 		FlywheelMass = 0.1,
 		RPM = {
 			Idle	= 1100,
@@ -140,7 +140,7 @@ do -- Special V6 Engines
 		Fuel		 = { Petrol = true },
 		Type		 = "GenericPetrol",
 		Mass		 = 134,
-		Torque		 = 215,
+		Torque		 = 215 * TorqueFactor,
 		FlywheelMass = 0.075,
 		RPM = {
 			Idle	= 950,
@@ -161,7 +161,7 @@ do -- Special V8 Engines
 		Fuel		 = { Petrol = true },
 		Type		 = "GenericPetrol",
 		Mass		 = 180,
-		Torque		 = 250,
+		Torque		 = 250 * TorqueFactor,
 		FlywheelMass = 0.075,
 		RPM = {
 			Idle	= 1000,
@@ -180,7 +180,7 @@ do -- Special V8 Engines
 		Fuel		 = { Petrol = true },
 		Type		 = "GenericPetrol",
 		Mass		 = 400,
-		Torque		 = 425,
+		Torque		 = 425 * TorqueFactor,
 		FlywheelMass = 0.15,
 		RPM = {
 			Idle	= 1000,
@@ -201,7 +201,7 @@ do -- Special V10 Engines
 		Fuel		 = { Petrol = true },
 		Type		 = "GenericPetrol",
 		Mass		 = 300,
-		Torque		 = 400,
+		Torque		 = 400 * TorqueFactor,
 		FlywheelMass = 0.15,
 		RPM = {
 			Idle	= 1100,
@@ -222,7 +222,7 @@ do -- Special V12 Engines
 		Fuel		 = { Petrol = true },
 		Type		 = "GenericPetrol",
 		Mass		 = 175,
-		Torque		 = 310,
+		Torque		 = 310 * TorqueFactor,
 		FlywheelMass = 0.1,
 		Pitch		 = 0.85,
 		RPM = {

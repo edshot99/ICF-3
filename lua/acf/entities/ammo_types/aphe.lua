@@ -14,7 +14,7 @@ function Ammo:OnLoaded()
 		GL = true,
 		MG = true,
 		SL = true,
-		RAC = true,
+		RAC = false,
 	}
 end
 

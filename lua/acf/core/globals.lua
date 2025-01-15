@@ -25,8 +25,8 @@ do -- ACF global vars
 	ACF.WorkshopContent      = true -- Enable workshop content download for clients
 	ACF.WorkshopExtras       = false -- Enable extra workshop content download for clients
 	ACF.SmokeWind            = 5 + math.random() * 35 --affects the ability of smoke to be used for screening effect
-	ACF.MobilityLinkDistance = 325 -- Maximum distance, in inches, at which mobility-related components will remain linked with each other
-	ACF.LinkDistance         = 200 -- Maximum distance, in inches, at which components will remain linked with each other
+	ACF.MobilityLinkDistance = 625 -- Maximum distance, in inches, at which mobility-related components will remain linked with each other
+	ACF.LinkDistance         = 625 -- Maximum distance, in inches, at which components will remain linked with each other
 	ACF.MinimumArmor         = 1 -- Minimum possible armor that can be given to an entity
 	ACF.MaximumArmor         = 5000 -- Maximum possible armor that can be given to an entity
 	ACF.KillIconColor        = Color(200, 200, 48)
@@ -43,7 +43,7 @@ do -- ACF global vars
 	ACF.InchToCmSq		     = 6.45 -- in² to cm²
 
 	-- Fuzes
-	ACF.MinFuzeCaliber       = 20 -- Minimum caliber in millimeters that can be fuzed
+	ACF.MinFuzeCaliber       = 12.7 -- Minimum caliber in millimeters that can be fuzed
 
 	-- Reload Mechanics
 	ACF.BaseReload           = 1 -- Minimum reload time. Time it takes to move around a weightless projectile

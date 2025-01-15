@@ -1,6 +1,6 @@
 local ACF     = ACF
 local Engines = ACF.Classes.Engines
-
+local TorqueFactor = 1.4
 
 Engines.Register("I2", {
 	Name = "Inline 2 Engine",
@@ -15,7 +15,7 @@ do
 		Fuel		 = { Diesel = true },
 		Type		 = "GenericDiesel",
 		Mass		 = 45,
-		Torque		 = 131,
+		Torque		 = 131 * TorqueFactor,
 		FlywheelMass = 0.12,
 		RPM = {
 			Idle	= 500,
@@ -34,7 +34,7 @@ do
 		Fuel		 = { Diesel = true },
 		Type		 = "GenericDiesel",
 		Mass		 = 800,
-		Torque		 = 2500,
+		Torque		 = 2500 * TorqueFactor,
 		FlywheelMass = 7,
 		RPM = {
 			Idle	= 350,
