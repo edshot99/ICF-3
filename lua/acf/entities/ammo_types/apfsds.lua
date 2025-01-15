@@ -72,7 +72,7 @@ function Ammo:BaseConvert(ToolData)
 
 	Data.ShovePower = 0.2
 	Data.LimitVel   = 1000 --Most efficient penetration speed in m/s
-	Data.Ricochet   = 80 --Base ricochet angle
+	Data.Ricochet   = 86 --Base ricochet angle
 
 	self:UpdateRoundData(ToolData, Data, GUIData)
 

@@ -1,6 +1,6 @@
 local ACF     = ACF
 local Engines = ACF.Classes.Engines
-
+local TorqueFactor = 1.4
 
 Engines.Register("V12", {
 	Name = "V12 Engine",
@@ -15,7 +15,7 @@ do -- Petrol Engines
 		Fuel		 = { Petrol = true },
 		Type		 = "GenericPetrol",
 		Mass		 = 188,
-		Torque		 = 317,
+		Torque		 = 317 * TorqueFactor,
 		FlywheelMass = 0.2,
 		RPM = {
 			Idle	= 1000,
@@ -34,7 +34,7 @@ do -- Petrol Engines
 		Fuel		 = { Petrol = true },
 		Type		 = "GenericPetrol",
 		Mass		 = 360,
-		Torque		 = 726,
+		Torque		 = 726 * TorqueFactor,
 		FlywheelMass = 0.45,
 		RPM = {
 			Idle	= 800,
@@ -53,7 +53,7 @@ do -- Petrol Engines
 		Fuel		 = { Petrol = true },
 		Type		 = "GenericPetrol",
 		Mass		 = 520,
-		Torque		 = 932,
+		Torque		 = 932 * TorqueFactor,
 		FlywheelMass = 2,
 		RPM = {
 			Idle	= 700,
@@ -72,7 +72,7 @@ do -- Petrol Engines
 		Fuel		 = { Petrol = true },
 		Type		 = "GenericPetrol",
 		Mass		 = 1350,
-		Torque		 = 2436,
+		Torque		 = 2436 * TorqueFactor,
 		FlywheelMass = 5,
 		RPM = {
 			Idle	= 600,
@@ -93,7 +93,7 @@ do -- Diesel Engines
 		Fuel		 = { Diesel = true },
 		Type		 = "GenericDiesel",
 		Mass		 = 305,
-		Torque		 = 510,
+		Torque		 = 510 * TorqueFactor,
 		FlywheelMass = 0.475,
 		RPM = {
 			Idle	= 650,
@@ -112,7 +112,7 @@ do -- Diesel Engines
 		Fuel		 = { Diesel = true },
 		Type		 = "GenericDiesel",
 		Mass		 = 600,
-		Torque		 = 1202,
+		Torque		 = 1202 * TorqueFactor,
 		FlywheelMass = 2.5,
 		RPM = {
 			Idle	= 675,
@@ -131,7 +131,7 @@ do -- Diesel Engines
 		Fuel		 = { Diesel = true },
 		Type		 = "GenericDiesel",
 		Mass		 = 1800,
-		Torque		 = 4325,
+		Torque		 = 4325 * TorqueFactor,
 		FlywheelMass = 7,
 		RPM = {
 			Idle	= 400,

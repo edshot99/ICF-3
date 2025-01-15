@@ -9,7 +9,7 @@ Weapons.Register("HW", {
 	Model       = "models/howitzer/howitzer_105mm.mdl",
 	MuzzleFlash = "howie_muzzleflash_noscale",
 	IsScalable  = true,
-	Mass        = 860,
+	Mass        = 2000,
 	Spread      = 0.1,
 	ScaleFactor = 0.84, -- Corrective factor to account for improperly scaled base models
 	Round = {
