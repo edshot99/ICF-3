@@ -7,8 +7,8 @@ Improved Combat Framework (ICF) is a fork of Armored Combat Framework (ACF), whi
 
 Ammunition is customizable with varying ballistic performance along with armor being customizable for protection against various threats. ICF is intended to be balanced for both sandbox and competetive use, to still allow various vehicle designs and to establish a field to fight on.
 
-![ICF Logo](icf-logo-dark.png#gh-light-mode-only)
-![ICF Logo](icf-logo-light.png#gh-dark-mode-only)
+![ICF Logo](icf-logo-white.png#gh-light-mode-only)
+![ICF Logo](icf-logo-black.png#gh-dark-mode-only)
 
 ## Installation
 
