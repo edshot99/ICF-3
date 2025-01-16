@@ -7,8 +7,8 @@ Improved Combat Framework (ICF) is a fork of Armored Combat Framework (ACF), whi
 
 Ammunition is customizable with varying ballistic performance along with armor being customizable for protection against various threats. ICF is intended to be balanced for both sandbox and competetive use, to still allow various vehicle designs and to establish a field to fight on.
 
-![ICF Logo](acf-logo-dark.png#gh-light-mode-only)
-![ICF Logo](acf-logo-light.png#gh-dark-mode-only)
+![ICF Logo](icf-logo-dark.png#gh-light-mode-only)
+![ICF Logo](icf-logo-light.png#gh-dark-mode-only)
 
 ## Installation
 
@@ -20,7 +20,7 @@ Contraption Framework ([Workshop](https://steamcommunity.com/sharedfiles/filedet
 
 Prop Protection with [CPPI](http://ulyssesmod.net/archive/CPPI_v1-3.pdf) is not required, but highly recommended. We'd recommend Nadmod PP ([Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=159298542) or [Github](https://github.com/Nebual/NadmodPP)).
 
-ICF works best when used with thin plate models and SProps ([Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=173482196)) provides a more complete selection over the vanilla PHX plates.
+ICF works best when used with primitives, thin plate models and SProps ([Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=173482196)), as they provide a more complete selection over the vanilla PHX plates.
 
 
 ### Git Client (Recommended)
