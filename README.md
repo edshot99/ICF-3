@@ -1,5 +1,5 @@
 # Improved Combat Framework
-> A fork of ACF, standardized combat and damage addon for Garry's Mod
+> A fork of ACF, which is a standardized combat and damage addon for Garry's Mod
 
 Discord : https://discord.gg/ZsuU4AVegg
 
