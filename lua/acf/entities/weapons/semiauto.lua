@@ -12,7 +12,7 @@ Weapons.Register("SA", {
 	IsBoxed     = true,
 	Spread      = 0.12,
 	Mass        = 453,
-	MagSize     = 5,
+	MagSize     = 15,
 	ScaleFactor = 1.0, -- Corrective factor to account for improperly scaled base models
 	Round = {
 		MaxLength  = 36,
@@ -24,15 +24,15 @@ Weapons.Register("SA", {
 	Caliber	= {
 		Base = 45,
 		Min  = 20,
-		Max  = 76,
+		Max  = 90,
 	},
 	MagReload = {
 		Min = 3,
-		Max = 10,
+		Max = 12,
 	},
 	Cyclic = {
 		Min = 350,
-		Max = 150,
+		Max = 125,
 	},
 })
 
