@@ -168,7 +168,7 @@ do -- ACF global vars
 
 	ACF.DefineSetting("AllowFunEnts",        true,   "Fun Entities have been %s.", ACF.BooleanDataCallback())
 	ACF.DefineSetting("AllowArbitraryParents", true,   "Arbitrary parenting has been %s.", ACF.BooleanDataCallback())
-	ACF.DefineSetting("AllowSpecialEngines", false,  "Special engines have been %s.", ACF.BooleanDataCallback())
+	ACF.DefineSetting("AllowSpecialEngines", true,  "Special engines have been %s.", ACF.BooleanDataCallback())
 	ACF.DefineSetting("ShowFunMenu",         true,   "The Fun Entities menu option has been %s.", ACF.BooleanDataCallback())
 	ACF.DefineSetting("AllowProcArmor",      false,  "Procedural armor has been %s.", ACF.BooleanDataCallback(function(Value)
 		ACF.GlobalFilter["acf_armor"] = not Value
