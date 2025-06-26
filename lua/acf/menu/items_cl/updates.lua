@@ -72,7 +72,7 @@ local function UpdateMenu()
 end
 
 local function CreateMenu(Menu)
-	Menu:AddTitle("ACF Version Status")
+	Menu:AddTitle("ICF Version Status")
 
 	MenuBase = Menu:AddPanel("ACF_Panel")
 
@@ -82,7 +82,7 @@ end
 ACF.AddMenuItem(1, "About the Addon", "Updates", "newspaper", CreateMenu)
 
 hook.Add("ACF_UpdatedRepository", "ACF Updates Menu", function(Name, Repo)
-	if Name ~= "ACF-3" then return end
+	if Name ~= "ICF-3" then return end
 
 	Repository = Repo
 
