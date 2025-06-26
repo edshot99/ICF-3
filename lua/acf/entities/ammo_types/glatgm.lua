@@ -8,13 +8,7 @@ function Ammo:OnLoaded()
 
 	self.Name		 = "Gun-Launched Anti-Tank Missile"
 	self.Description = "A missile fired from a gun. While slower than a traditional shell, it makes up for that with guidance."
-	self.Blacklist = ACF.GetWeaponBlacklist({
-		C = true,
-		AL = true,
-		HW = true,
-		SC = true,
-	})
-
+	self.Blacklist = {}
 	self.MaxStandoffRatio = .4
 end
 

@@ -8,10 +8,7 @@ function Ammo:OnLoaded()
 	self.Name		 = "Armor Piercing"
 	self.Model		 = "models/munitions/round_100mm_ap_shot.mdl"
 	self.Description = "#acf.descs.ammo.ap"
-	self.Blacklist = {
-		GL = true,
-		SL = true,
-	}
+	self.Blacklist = {}
 end
 
 function Ammo:GetPenetration(Bullet, Speed)

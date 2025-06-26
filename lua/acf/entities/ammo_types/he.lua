@@ -9,10 +9,7 @@ function Ammo:OnLoaded()
 	self.Name		 = "High Explosive"
 	self.Model		 = "models/munitions/round_100mm_shot.mdl"
 	self.Description = "#acf.descs.ammo.he"
-	self.Blacklist = {
-		MG = true,
-		RAC = true,
-	}
+	self.Blacklist = {}
 end
 
 function Ammo:GetPenetration()

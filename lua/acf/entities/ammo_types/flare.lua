@@ -7,10 +7,7 @@ function Ammo:OnLoaded()
 
 	self.Name		 = "Flare"
 	self.Description = "A countermeasure for infrared guided munitions."
-	self.Blacklist = ACF.GetWeaponBlacklist({
-		SL = true,
-		FGL = true,
-	})
+
 end
 
 function Ammo:GetDisplayData(Data)

@@ -9,15 +9,7 @@ function Ammo:OnLoaded()
 	self.Name		 = "Armor Piercing Composite Rigid"
 	self.Model		 = "models/munitions/round_100mm_ap_shot.mdl"
 	self.Description = "#acf.descs.ammo.apcr"
-	self.Blacklist = ACF.GetWeaponBlacklist({
-		C = true,
-		AL = true,
-		AC = true,
-		SA = true,
-		SC = true,
-		LAC = true,
-		RAC = true,
-	})
+	self.Blacklist = {}
 end
 
 function Ammo:UpdateRoundData(ToolData, Data, GUIData)
