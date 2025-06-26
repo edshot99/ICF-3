@@ -3,7 +3,7 @@
 
 Discord : None currently
 
-Improved Combat Framework (ICF) is a fork of Armored Combat Framework (ACF), which aims to rebalance and redesign the addon as a whole. It was created by the IMR Buildergroup, due to disagreements with recent changes in development directions, which limited design choice feasibility.
+Improved Combat Framework (ICF) is a fork of Armored Combat Framework (ACF), which aims to rebalance and redesign the addon as a whole. It was created by the IMR Buildergroup, to have both a more unique experience to the original ACF3, while allowing forward and backward compatibility.
 
 Ammunition is customizable with varying ballistic performance along with armor being customizable for protection against various threats. ICF is intended to be balanced for both sandbox and competetive use, to still allow various vehicle designs and to establish a field to fight on.
 
