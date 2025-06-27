@@ -741,10 +741,12 @@ do -- Loading ----------------------------------
 			local IdClass     = IdGroup.Lookup[IdName]
 			LimitConVar = IdClass.LimitConVar or IdGroup.LimitConVar
 
+			--[[
 			if LimitConVar then
 				Owner = self:CPPIGetOwner()
 				if IsValid(Owner) and not Owner:CheckLimit(LimitConVar.Name) then return end
 			end
+			]]--
 		end
 
 		if not self.Firing and Index and Crate and not CheckDistantLink(self, Crate, self:GetPos()) then
