@@ -1,6 +1,6 @@
 local ACF     = ACF
 local Engines = ACF.Classes.Engines
-
+local TorqueFactor = 1.4
 
 Engines.Register("R", {
 	Name		= "Rotary Engine",
@@ -16,7 +16,7 @@ do
 		Fuel		 = { Petrol = true },
 		Type		 = "Wankel",
 		Mass		 = 50,
-		Torque		 = 97,
+		Torque		 = 97 * TorqueFactor,
 		FlywheelMass = 0.06,
 		RPM = {
 			Idle	= 950,
@@ -35,7 +35,7 @@ do
 		Fuel		 = { Petrol = true },
 		Type		 = "Wankel",
 		Mass		 = 140,
-		Torque		 = 155,
+		Torque		 = 155 * TorqueFactor,
 		FlywheelMass = 0.06,
 		RPM = {
 			Idle	= 950,
@@ -54,7 +54,7 @@ do
 		Fuel		 = { Petrol = true },
 		Type		 = "Wankel",
 		Mass		 = 200,
-		Torque		 = 235,
+		Torque		 = 235 * TorqueFactor,
 		FlywheelMass = 0.1,
 		RPM = {
 			Idle	= 950,

@@ -1,6 +1,6 @@
 local ACF     = ACF
 local Engines = ACF.Classes.Engines
-
+local TorqueFactor = 1.4
 
 do -- Electric Motors
 	Engines.Register("EL", {
@@ -16,7 +16,7 @@ do -- Electric Motors
 		Fuel		 = { Electric = true },
 		Type		 = "Electric",
 		Mass		 = 250,
-		Torque		 = 480,
+		Torque		 = 480 * TorqueFactor,
 		FlywheelMass = 0.3,
 		IsElectric	 = true,
 		RPM = {
@@ -37,7 +37,7 @@ do -- Electric Motors
 		Fuel		 = { Electric = true },
 		Type		 = "Electric",
 		Mass		 = 850,
-		Torque		 = 1440,
+		Torque		 = 1440 * TorqueFactor,
 		FlywheelMass = 1.5,
 		IsElectric	 = true,
 		RPM = {
@@ -58,7 +58,7 @@ do -- Electric Motors
 		Fuel		 = { Electric = true },
 		Type		 = "Electric",
 		Mass		 = 1900,
-		Torque		 = 4200,
+		Torque		 = 4200 * TorqueFactor,
 		FlywheelMass = 11.2,
 		IsElectric	 = true,
 		RPM = {
@@ -83,7 +83,7 @@ do -- Electric Standalone Motors
 		Fuel		 = { Electric = true },
 		Type		 = "Electric",
 		Mass		 = 50,
-		Torque		 = 40,
+		Torque		 = 40 * TorqueFactor,
 		FlywheelMass = 0.025,
 		IsElectric	 = true,
 		RPM = {
@@ -104,7 +104,7 @@ do -- Electric Standalone Motors
 		Fuel		 = { Electric = true },
 		Type		 = "Electric",
 		Mass		 = 125,
-		Torque		 = 384,
+		Torque		 = 384 * TorqueFactor,
 		FlywheelMass = 0.3,
 		IsElectric	 = true,
 		RPM = {
@@ -125,7 +125,7 @@ do -- Electric Standalone Motors
 		Fuel		 = { Electric = true },
 		Type		 = "Electric",
 		Mass		 = 575,
-		Torque		 = 1152,
+		Torque		 = 1152 * TorqueFactor,
 		FlywheelMass = 1.5,
 		IsElectric	 = true,
 		RPM = {
@@ -146,7 +146,7 @@ do -- Electric Standalone Motors
 		Fuel		 = { Electric = true },
 		Type		 = "Electric",
 		Mass		 = 1500,
-		Torque		 = 3360,
+		Torque		 = 3360 * TorqueFactor,
 		FlywheelMass = 11.2,
 		IsElectric	 = true,
 		RPM = {

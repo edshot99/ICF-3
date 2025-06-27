@@ -1,6 +1,6 @@
 local ACF     = ACF
 local Engines = ACF.Classes.Engines
-
+local TorqueFactor = 1.4
 
 Engines.Register("R7", {
 	Name = "Radial 7 Engine",
@@ -15,7 +15,7 @@ do
 		Fuel		 = { Petrol = true },
 		Type		 = "Radial",
 		Mass		 = 210,
-		Torque		 = 387,
+		Torque		 = 387 * TorqueFactor,
 		FlywheelMass = 0.22,
 		RPM = {
 			Idle	= 700,
@@ -34,7 +34,7 @@ do
 		Fuel		 = { Petrol = true },
 		Type		 = "Radial",
 		Mass		 = 385,
-		Torque		 = 700,
+		Torque		 = 700 * TorqueFactor,
 		FlywheelMass = 0.45,
 		RPM = {
 			Idle	= 600,
@@ -53,7 +53,7 @@ do
 		Fuel		 = { Petrol = true, Diesel = true },
 		Type		 = "GenericDiesel",
 		Mass		 = 450,
-		Torque		 = 1000,
+		Torque		 = 1000 * TorqueFactor,
 		FlywheelMass = 1,
 		RPM = {
 			Idle	= 400,
@@ -72,7 +72,7 @@ do
 		Fuel		 = { Petrol = true },
 		Type		 = "Radial",
 		Mass		 = 952,
-		Torque		 = 1990,
+		Torque		 = 1990 * TorqueFactor,
 		FlywheelMass = 3.4,
 		RPM = {
 			Idle	= 750,

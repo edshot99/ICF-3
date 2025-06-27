@@ -1,6 +1,6 @@
 local ACF     = ACF
 local Engines = ACF.Classes.Engines
-
+local TorqueFactor = 1.4
 
 Engines.Register("GT", {
 	Name		= "Gas Turbine",
@@ -16,7 +16,7 @@ do -- Forward-facing Gas Turbines
 		Fuel		 = { Petrol = true, Diesel = true },
 		Type		 = "Turbine",
 		Mass		 = 200,
-		Torque		 = 589,
+		Torque		 = 589 * TorqueFactor,
 		FlywheelMass = 2.9,
 		IsElectric	 = true,
 		RPM = {
@@ -37,7 +37,7 @@ do -- Forward-facing Gas Turbines
 		Fuel		 = { Petrol = true, Diesel = true },
 		Type		 = "Turbine",
 		Mass		 = 400,
-		Torque		 = 1312,
+		Torque		 = 1312 * TorqueFactor,
 		FlywheelMass = 4.3,
 		IsElectric	 = true,
 		RPM = {
@@ -58,7 +58,7 @@ do -- Forward-facing Gas Turbines
 		Fuel		 = { Petrol = true, Diesel = true },
 		Type		 = "Turbine",
 		Mass		 = 1100,
-		Torque		 = 2500,
+		Torque		 = 2500 * TorqueFactor,
 		FlywheelMass = 10.5,
 		IsElectric	 = true,
 		RPM = {
@@ -81,7 +81,7 @@ do -- Transaxial Gas Turbines
 		Fuel		 = { Petrol = true, Diesel = true },
 		Type		 = "Turbine",
 		Mass		 = 160,
-		Torque		 = 387,
+		Torque		 = 387 * TorqueFactor,
 		FlywheelMass = 2.3,
 		IsElectric	 = true,
 		IsTrans		 = true,
@@ -103,7 +103,7 @@ do -- Transaxial Gas Turbines
 		Fuel		 = { Petrol = true, Diesel = true },
 		Type		 = "Turbine",
 		Mass		 = 320,
-		Torque		 = 750,
+		Torque		 = 750 * TorqueFactor,
 		FlywheelMass = 3.4,
 		IsElectric	 = true,
 		IsTrans		 = true,
@@ -125,7 +125,7 @@ do -- Transaxial Gas Turbines
 		Fuel		 = { Petrol = true, Diesel = true },
 		Type		 = "Turbine",
 		Mass		 = 880,
-		Torque		 = 1710,
+		Torque		 = 1710 * TorqueFactor,
 		FlywheelMass = 8.4,
 		IsElectric	 = true,
 		IsTrans		 = true,
@@ -154,7 +154,7 @@ do -- Forward-facing Ground Gas Turbines
 		Fuel		 = { Petrol = true, Diesel = true },
 		Type		 = "Turbine",
 		Mass		 = 220,
-		Torque		 = 1860,
+		Torque		 = 1860 * TorqueFactor,
 		FlywheelMass = 35.5,
 		IsElectric	 = true,
 		RPM = {
@@ -175,7 +175,7 @@ do -- Forward-facing Ground Gas Turbines
 		Fuel		 = { Petrol = true, Diesel = true },
 		Type		 = "Turbine",
 		Mass		 = 440,
-		Torque		 = 3540,
+		Torque		 = 3540 * TorqueFactor,
 		FlywheelMass = 38.7,
 		IsElectric	 = true,
 		Pitch		 = 1.15,
@@ -197,7 +197,7 @@ do -- Forward-facing Ground Gas Turbines
 		Fuel		 = { Petrol = true, Diesel = true },
 		Type		 = "Turbine",
 		Mass		 = 1300,
-		Torque		 = 9000,
+		Torque		 = 9000 * TorqueFactor,
 		FlywheelMass = 168,
 		IsElectric	 = true,
 		Pitch		 = 1.35,
@@ -221,7 +221,7 @@ do -- Transaxial Ground Gas Turbines
 		Fuel		 = { Petrol = true, Diesel = true },
 		Type		 = "Turbine",
 		Mass		 = 200,
-		Torque		 = 1040,
+		Torque		 = 1040 * TorqueFactor,
 		FlywheelMass = 20.7,
 		IsElectric	 = true,
 		IsTrans		 = true,
@@ -243,7 +243,7 @@ do -- Transaxial Ground Gas Turbines
 		Fuel		 = { Petrol = true, Diesel = true },
 		Type		 = "Turbine",
 		Mass		 = 480,
-		Torque		 = 1123,
+		Torque		 = 1123 * TorqueFactor,
 		FlywheelMass = 23.7,
 		IsElectric	 = true,
 		IsTrans		 = true,
@@ -266,7 +266,7 @@ do -- Transaxial Ground Gas Turbines
 		Fuel		 = { Petrol = true, Diesel = true },
 		Type		 = "Turbine",
 		Mass		 = 1100,
-		Torque		 = 4600,
+		Torque		 = 4600 * TorqueFactor,
 		FlywheelMass = 75.6,
 		IsElectric	 = true,
 		IsTrans		 = true,
