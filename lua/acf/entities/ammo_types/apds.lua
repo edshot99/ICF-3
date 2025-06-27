@@ -9,13 +9,7 @@ function Ammo:OnLoaded()
 	self.Name		 = "Armor Piercing Discarding Sabot"
 	self.Model		 = "models/munitions/round_100mm_ap_shot.mdl"
 	self.Description = "#acf.descs.ammo.apds"
-	self.Blacklist = ACF.GetWeaponBlacklist({
-		C = true,
-		AL = true,
-		AC = true,
-		SA = true,
-		RAC = true,
-	})
+	self.Blacklist = {}
 end
 
 function Ammo:UpdateRoundData(ToolData, Data, GUIData)

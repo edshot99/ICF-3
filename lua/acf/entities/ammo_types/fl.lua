@@ -10,16 +10,7 @@ function Ammo:OnLoaded()
 	self.Name		 = "Flechette"
 	self.Model		 = "models/munitions/dart_100mm.mdl"
 	self.Description = "#acf.descs.ammo.fl"
-	self.Blacklist = {
-		AC = true,
-		GL = true,
-		MG = true,
-		MO = true,
-		SA = true,
-		SL = true,
-		LAC = true,
-		RAC = true,
-	}
+	self.Blacklist = {}
 end
 
 -- Packing function to get the rough caliber of a flechette

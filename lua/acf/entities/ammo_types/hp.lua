@@ -10,9 +10,7 @@ function Ammo:OnLoaded()
 	self.Name		 = "Hollow Point"
 	self.Model		 = "models/munitions/round_100mm_shot.mdl"
 	self.Description = "#acf.descs.ammo.hp"
-	self.Blacklist = ACF.GetWeaponBlacklist({
-		MG = true,
-	})
+	self.Blacklist = {}
 end
 
 function Ammo:GetDisplayData(Data)

@@ -8,14 +8,7 @@ function Ammo:OnLoaded()
 
 	self.Name		 = "High Explosive Anti-Tank Fin Stabilized"
 	self.Description = "#acf.descs.ammo.heatfs"
-	self.Blacklist = ACF.GetWeaponBlacklist({
-		C = true,
-		M = true,
-		AL = true,
-		HW = true,
-		SC = true,
-	})
-
+	self.Blacklist = {}
 	self.MaxStandoffRatio = .75
 end
 

@@ -12,13 +12,7 @@ function Ammo:OnLoaded()
 	self.Name		 = "High Explosive Anti-Tank"
 	self.Model		 = "models/munitions/round_100mm_shot.mdl"
 	self.Description = "#acf.descs.ammo.heat"
-	self.Blacklist = {
-		AC = true,
-		MG = true,
-		SL = true,
-		LAC = true,
-		RAC = true,
-	}
+	self.Blacklist = {}
 end
 
 function Ammo:ConeCalc(ConeAngle, Radius)

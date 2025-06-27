@@ -11,12 +11,7 @@ function Ammo:OnLoaded()
 	self.Name		 = "Armor Piercing High Explosive"
 	self.Model		 = "models/munitions/round_100mm_ap_shot.mdl"
 	self.Description = "#acf.descs.ammo.aphe"
-	self.Blacklist = {
-		GL = true,
-		MG = true,
-		SL = true,
-		RAC = false,
-	}
+	self.Blacklist = {}
 end
 
 function Ammo:GetPenetration(Bullet, Speed)

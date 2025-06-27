@@ -8,15 +8,7 @@ function Ammo:OnLoaded()
 	self.Name		 = "Smoke"
 	self.Model		 = "models/munitions/round_100mm_shot.mdl"
 	self.Description = "#acf.descs.ammo.sm"
-	self.Blacklist = {
-		AC = true,
-		AL = true,
-		GL = true,
-		MG = true,
-		SA = true,
-		LAC = true,
-		RAC = true,
-	}
+	self.Blacklist = {}
 end
 
 function Ammo:GetPenetration()

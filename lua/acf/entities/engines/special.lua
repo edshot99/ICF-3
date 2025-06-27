@@ -5,6 +5,7 @@ local TorqueFactor = 1.4
 function Engines.IsSpecial(Engine)
 	return Engine.Class.ID == "SP"
 end
+local TorqueFactor = 1.4
 
 Engines.Register("SP", {
 	Name = "Special Engine",
