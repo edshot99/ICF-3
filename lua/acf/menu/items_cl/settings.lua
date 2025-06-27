@@ -172,6 +172,23 @@ do -- Serverside settings
 			return Value
 		end)
 
+		local ScannerCanScan = Base:AddCheckBox("#acf.menu.settings.general.scanner_can_scan")
+		ScannerCanScan:SetServerData("ScannerCanScan", "OnChange")
+		ScannerCanScan:DefineSetter(function(Panel, _, _, Value)
+			Panel:SetValue(Value)
+
+			return Value
+		end)
+
+		local ScannerWhyNotLabel = Base:AddLabel("#acf.menu.settings.general.scanner_why_not")
+		local ScannerWhyNot = Base:AddTextEntry()
+		ScannerWhyNot:SetServerData("ScannerWhyNot", "OnEnter")
+		ScannerWhyNot:DefineSetter(function(Panel, _, _, Value)
+			Panel:SetValue(Value)
+
+			return Value
+		end)
+
 		local LegalCheckNameAndShame = Base:AddCheckBox("#acf.menu.settings.general.name_and_shame")
 		LegalCheckNameAndShame:SetServerData("NameAndShame", "OnChange")
 		LegalCheckNameAndShame:DefineSetter(function(Panel, _, _, Value)
