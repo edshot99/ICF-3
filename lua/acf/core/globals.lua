@@ -194,7 +194,7 @@ do -- ACF global vars
 	ACF.MinFuzeCaliber       = 12.7 -- Minimum caliber in millimeters that can be fuzed
 
 	-- Reload Mechanics
-	ACF.BaseReload         = 1 -- Minimum reload time. Time it takes to move around a weightless projectile
+	ACF.BaseReload         = 0 -- Minimum reload time. Time it takes to move around a weightless projectile
 	ACF.MassToTime         = 0.25 -- Conversion of projectile mass to time be moved around
 	ACF.LengthToTime       = 0.025 -- Conversion of projectile length to time -- Emulating the added difficulty of manipulating a longer projectile
 
@@ -310,8 +310,8 @@ do -- ACF global vars
 	ACF.CrewSpaceLengthMod 	= 0.425	-- Changes contribution of shell length to ideal crew space
 	ACF.CrewSpaceCaliberMod = 1.0	-- Changes contribution of shell caliber to ideal crew space
 
-	ACF.CrewArmor 			= 5		-- How many millimeters of armor crew members have
-	ACF.CrewHealth 			= 4		-- How much health crew members have
+	ACF.CrewArmor 			= 50		-- How many millimeters of armor crew members have
+	ACF.CrewHealth 			= 25		-- How much health crew members have
 
 	ACF.CrewOxygen 			= 10	-- How many seconds can crew hold their breath for
 	ACF.CrewOxygenLossRate 	= 1		-- Multiplier for how fast crew regain their breath
@@ -320,9 +320,9 @@ do -- ACF global vars
 	ACF.AmmoStageMin 		= 1		-- Minimum stage index for ammo stowages
 	ACF.AmmoStageMax 		= 5		-- Maximum stage index for ammo stowages
 
-	ACF.LoaderBestDist 		= 100	-- Distance before which loaders are most effective
+	ACF.LoaderBestDist 		= 150	-- Distance before which loaders are most effective
 	ACF.LoaderWorstDist 	= 300	-- Distance after which loaders are least effective
-	ACF.LoaderMaxBonus 		= 2		-- Maximum bonus loaders can give to reload time
+	ACF.LoaderMaxBonus 		= 10		-- Maximum bonus loaders can give to reload time
 
 	ACF.InitReloadDelay		= 10		-- Delay after spawning that belt feds are loaded
 
