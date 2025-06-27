@@ -10,4 +10,4 @@ local function CreateMenu(Menu)
 	end
 end
 
-ACF.AddMenuItem(2, "About the Addon", "Help", "book_open", CreateMenu)
+ACF.AddMenuItem(2, "#acf.menu.about", "Help", "book_open", CreateMenu)
