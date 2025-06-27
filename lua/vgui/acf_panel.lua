@@ -197,6 +197,12 @@ function PANEL:AddSlider(Title, Min, Max, Decimals)
 	return Panel
 end
 
+function PANEL:AddTextEntry()
+	local Panel = self:AddPanel("DTextEntry")
+
+	return Panel
+end
+
 function PANEL:AddNumberWang(Label, Min, Max, Decimals)
 	local Base = self:AddPanel("ACF_Panel")
 

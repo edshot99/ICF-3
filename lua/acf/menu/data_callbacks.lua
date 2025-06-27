@@ -39,6 +39,28 @@ local Settings = {
 
 		Message("Info", "Legality checks for ACF entities have been " .. (Bool and "enabled." or "disabled."))
 	end,
+	ScannerCanScan = function(Player, _, Value)
+		local Bool = tobool(Value)
+
+		if ACF.Scanning.canScan == Bool then return end
+
+		ACF.Scanning.canScan = Bool
+
+		if CLIENT and not IsValid(Player) then return end
+
+		Message("Info", "Scanner has been " .. (Bool and "enabled." or "disabled."))
+	end,
+	ScannerWhyNot = function(Player, _, Value)
+		local String = tostring(Value)
+
+		if ACF.Scanning.whyNot == String then return end
+
+		ACF.Scanning.whyNot = String
+
+		if CLIENT and not IsValid(Player) then return end
+
+		Message("Info", "Scanner disabled message has been set to '" .. String .. "'.")
+	end,
 	NameAndShame = function(Player, _, Value)
 		local Bool = tobool(Value)
 

@@ -4,6 +4,8 @@
 ACF.PersistServerData("LegalChecks", true)
 ACF.PersistServerData("NameAndShame", false)
 ACF.PersistServerData("VehicleLegalChecks", true)
+ACF.PersistServerData("ScannerCanScan", true)
+ACF.PersistServerData("ScannerWhyNot", "<no reason provided>")
 ACF.PersistServerData("ServerDataAllowAdmin", false)
 ACF.PersistServerData("RestrictInfo", true)
 ACF.PersistServerData("GunsCanFire", true)
