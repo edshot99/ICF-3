@@ -70,4 +70,4 @@ local function CreateMenu(Menu)
 	)
 end
 
-ACF.AddMenuItem(0, "Entities", "Baseplates", "shape_square", CreateMenu)
+ACF.AddMenuItem(999, "Entities", "Baseplates", "shape_square", CreateMenu)
