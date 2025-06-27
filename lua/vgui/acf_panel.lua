@@ -255,6 +255,12 @@ end
 function PANEL:AddTextEntry()
 	local Panel = self:AddPanel("DTextEntry")
 
+	function Panel:LinkToServerData(Key)
+		local Value = ACF.GetSetting(Key)
+		self:SetValue(Value)
+		self:SetServerData(Key, "OnEnter")
+	end
+
 	return Panel
 end
 

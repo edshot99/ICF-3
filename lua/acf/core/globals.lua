@@ -106,6 +106,21 @@ do
 			return Float
 		end
 	end
+
+	function ACF.StringDataCallback(Callback)
+		local SettingData = ACF.GetWorkingSetting()
+		SettingData.Type = "String"
+
+		return function(_, Value)
+			Value = tostring(Value)
+
+			if Callback then
+				Callback(Value)
+			end
+
+			return Value
+		end
+	end
 end
 
 do -- ACF global vars
@@ -122,6 +137,8 @@ do -- ACF global vars
 	ACF.DefineSetting("LegalChecks",        true,   "Legality checks for ACF entities has been %s.", ACF.BooleanDataCallback())
 	ACF.DefineSetting("NameAndShame",       false,  "Console messages for failed legality checks have been %s.", ACF.BooleanDataCallback())
 	ACF.DefineSetting("VehicleLegalChecks", true,   "Legality checks for vehicles has been %s.", ACF.BooleanDataCallback())
+	ACF.DefineSetting("ScannerCanScan",     true,   "Legality scanner for vehicles has been %s.", ACF.BooleanDataCallback())
+	ACF.DefineSetting("ScannerWhyNot",      "<no reason provided>",   "Legality scanner disabled message has been set to '%s'.", ACF.StringDataCallback())
 
 	ACF.DefineSetting("GunsCanFire",        true,   "Gunfire has been %s.", ACF.BooleanDataCallback())
 	ACF.DefineSetting("GunsCanSmoke",       true,   "Gun sounds and particles have been %s.", ACF.BooleanDataCallback())

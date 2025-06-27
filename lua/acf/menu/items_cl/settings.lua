@@ -180,8 +180,9 @@ do -- Serverside settings
 	ACF.AddServerSettings(201, "#acf.menu.settings.legal_checks", function(Base)
 		Base:AddCheckBox("#acf.menu.settings.general.legal_checks"):         LinkToServerData("LegalChecks")
 		Base:AddCheckBox("#acf.menu.settings.general.legal_checks_vehicle"): LinkToServerData("VehicleLegalChecks")
-		Base:AddCheckBox("#acf.menu.settings.general.scanner_can_scan"): LinkToServerData("ScannerCanScan")
-		Base:AddTextEntry(): LinkToServerData("ScannerWhyNot")
+		Base:AddCheckBox("#acf.menu.settings.general.scanner_can_scan"):     LinkToServerData("ScannerCanScan")
+		Base:AddLabel("#acf.menu.settings.general.scanner_why_not")
+		Base:AddTextEntry():                                                 LinkToServerData("ScannerWhyNot")
 		Base:AddCheckBox("#acf.menu.settings.general.name_and_shame"):       LinkToServerData("NameAndShame")
 
 		Base:AddCheckBox("#acf.menu.settings.fun_menu.arbitrary_parents"):LinkToServerData("AllowArbitraryParents")
