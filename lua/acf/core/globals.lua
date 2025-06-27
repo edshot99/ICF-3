@@ -134,7 +134,7 @@ do -- ACF global vars
 	ACF.ArmorMod = 1
 	ACF.DefineSetting("ArmorFactor",        1,      "Armor multiplier has been set to a factor of %.2f.", ACF.FactorDataCallback("ArmorMod", 0.01, 2, 2))
 
-	ACF.FuelRate = 15 -- Multiplier for fuel usage, 1.0 is approx real world
+	ACF.FuelRate = 5 -- Multiplier for fuel usage, 1.0 is approx real world
 	ACF.DefineSetting("FuelFactor",         1,      "Fuel rate multiplier has been set to a factor of %.2f.", ACF.FactorDataCallback("FuelRate", 0.01, 2, 2))
 
 	ACF.MinimumArmor         = 1     -- Minimum possible armor that can be given to an entity
@@ -150,7 +150,7 @@ do -- ACF global vars
 	ACF.DefineSetting("RecoilPush",         true,   "Recoil entity pushing has been %s.", ACF.BooleanDataCallback())
 
 	ACF.DefineSetting("AllowFunEnts",        true,   "Fun Entities have been %s.", ACF.BooleanDataCallback())
-	ACF.DefineSetting("AllowArbitraryParents", false,   "Arbitrary parenting has been %s.", ACF.BooleanDataCallback())
+	ACF.DefineSetting("AllowArbitraryParents", true,   "Arbitrary parenting has been %s.", ACF.BooleanDataCallback())
 	ACF.DefineSetting("AllowSpecialEngines", false,  "Special engines have been %s.", ACF.BooleanDataCallback())
 	ACF.DefineSetting("ShowFunMenu",         true,   "The Fun Entities menu option has been %s.", ACF.BooleanDataCallback())
 	ACF.DefineSetting("AllowProcArmor",      false,  "Procedural armor has been %s.", ACF.BooleanDataCallback(function(Value)
@@ -191,7 +191,7 @@ do -- ACF global vars
 	ACF.LToGal               = 0.264172 -- Liters to gallons
 
 	-- Fuzes
-	ACF.MinFuzeCaliber       = 20 -- Minimum caliber in millimeters that can be fuzed
+	ACF.MinFuzeCaliber       = 12.7 -- Minimum caliber in millimeters that can be fuzed
 
 	-- Reload Mechanics
 	ACF.BaseReload         = 1 -- Minimum reload time. Time it takes to move around a weightless projectile
@@ -292,13 +292,13 @@ do -- ACF global vars
 	ACF.FuelRefillColor    = Color(76, 201, 250, 10) -- The color to use for the fuel refill effect
 	ACF.TankVolumeMul      = 1 -- Multiplier for fuel tank capacity, 1.0 is approx real world
 	ACF.LiIonED            = 0.458 -- li-ion energy density: kw hours / liter
-	ACF.RefillDistance     = 300 -- Distance in which ammo crate starts refilling.
-	ACF.RefillSpeed        = 700 -- (ACF.RefillSpeed / RoundMass) / Distance
-	ACF.RefuelSpeed        = 20 -- Liters per second * ACF.FuelRate
+	ACF.RefillDistance     = 900 -- Distance in which ammo crate starts refilling.
+	ACF.RefillSpeed        = 1400 -- (ACF.RefillSpeed / RoundMass) / Distance
+	ACF.RefuelSpeed        = 60 -- Liters per second * ACF.FuelRate
 
 	-- Crew 
 	-- Total efficiency = clamp(CommanderEff * CommanderCoef + SelfEff * SelfCoef, FallBackCoef, 1)
-	ACF.DefineSetting("CrewFallbackCoef", 0.1, nil, ACF.FloatDataCallback(0.1, 1, 2)) -- Minimum possible efficiency
+	ACF.DefineSetting("CrewFallbackCoef", 1, nil, ACF.FloatDataCallback(0.1, 1, 2)) -- Minimum possible efficiency
 	ACF.CrewCommanderCoef 	= 0.3	-- Portion of a crew's efficiency the commander provides
 	ACF.CrewSelfCoef 		= 1.0	-- Portion of a crew's efficiency they provide
 

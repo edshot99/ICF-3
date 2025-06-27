@@ -10,7 +10,7 @@ Weapons.Register("AL", {
 	MuzzleFlash = "cannon_muzzleflash_noscale",
 	IsScalable  = true,
 	IsAutomatic = true,
-	Mass        = 2985,
+	Mass        = 2350,
 	Spread      = 0.08,
 	MagSize     = 6,
 	ScaleFactor = 1.0, -- Corrective factor to account for improperly scaled base models

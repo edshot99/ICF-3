@@ -5,7 +5,7 @@ ACF.ActiveLasers   = ACF.ActiveLasers or {}
 ACF.ActiveMissiles = ACF.ActiveMissiles or {}
 ACF.ActiveRadars   = ACF.ActiveRadars or {}
 
-ACF.FlareBurnMultiplier     = 0.025
+ACF.FlareBurnMultiplier     = 0.1
 ACF.FlareDistractMultiplier = 1 / 35
 ACF.MaxDamageInaccuracy     = 1000
 ACF.DefaultRadarSound       = "buttons/button16.wav"
