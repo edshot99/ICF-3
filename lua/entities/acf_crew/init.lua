@@ -570,7 +570,7 @@ do
 
 					local Reasons = {}
 					if OutOfRange then Reasons[#Reasons + 1] = "the two crews are out of range" end
-					if DiffAncestors then Reasons[#Reasons + 1] = "the two crews contraptions differed" end
+					if DiffAncestors then Reasons[#Reasons + 1] = "the two crews have different parents (check multi-parents)" end
 					Reasons = table.concat(Reasons, ", and ")
 					Reasons = string.upper(Reasons[1]) .. string.sub(Reasons, 2)
 
