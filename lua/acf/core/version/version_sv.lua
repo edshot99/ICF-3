@@ -1,6 +1,6 @@
 local ACF = ACF
 local Repos = ACF.Repositories
-local GitHub = false
+local GitHub = true
 
 do -- Github data conversion
 	local string = string
