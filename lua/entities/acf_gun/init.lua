@@ -127,9 +127,11 @@ do -- Random timer crew stuff
 			end
 
 			local IsBlocked = (tr.Hit or (tr2 and tr2.Hit))
-			self.OverlayErrors.BreechCheck = IsBlocked and "Not enough space behind breech!\nHover with ACF menu tool" or nil
-			self:UpdateOverlay()
-			if IsBlocked then return 0.000001 end
+			if IsBlocked and not ACF.AllowArbitraryParents then
+				self.OverlayErrors.BreechCheck = IsBlocked and "Not enough space behind breech!\nHover with ACF menu tool" or nil
+				self:UpdateOverlay()
+				return 0.000001
+			end
 		end
 
 		return self.LoadCrewMod
@@ -741,6 +743,11 @@ do -- Metamethods --------------------------------
 			if self.ParentState ~= 1 and ACF.LegalChecks and not ACF.AllowArbitraryParents then
 				-- This NEEDS a better message, I can't find a good way to explain it right now
 				ACF.DisableEntity(self, "Invalid Parent Chain", "Guns can only be parented to turret entities and must have a baseplate root ancestor.", 5)
+				return false
+			end
+
+			if self.OverlayErrors.BreechCheck then
+				ACF.DisableEntity(self, "Breech Check", "Not enough space behind breech!\nHover over gun with ACF menu tool to fix.", 5)
 				return false
 			end
 
