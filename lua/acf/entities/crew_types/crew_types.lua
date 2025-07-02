@@ -138,7 +138,13 @@ CrewTypes.Register("Gunner", {
 		},
 		acf_baseplate = {
 			CanLink = function(Crew) -- Called when a crew member tries to link to an entity
-				if CheckCount(Crew, "acf_baseplate") then return false, "Gunners can only link to one acf_baseplate." end
+				if CheckCount(Crew, "acf_baseplate") or CheckCount(Crew, "prop_physics") then return false, "Gunners can only link to one baseplate." end
+				return true, "Crew linked."
+			end
+		},
+		prop_physics = {
+			CanLink = function(Crew) -- Called when a crew member tries to link to an entity
+				if CheckCount(Crew, "prop_physics") or CheckCount(Crew, "acf_baseplate") then return false, "Gunners can only link to one baseplate." end
 				return true, "Crew linked."
 			end
 		}
@@ -179,6 +185,12 @@ CrewTypes.Register("Driver", {
 	},
 	LinkHandlers = {
 		acf_baseplate = {
+			CanLink = function(Crew) -- Called when a crew member tries to link to an entity
+				if CheckCount(Crew) then return false, "Drivers can only link to one entity." end
+				return true, "Crew linked."
+			end
+		},
+		prop_physics = {
 			CanLink = function(Crew) -- Called when a crew member tries to link to an entity
 				if CheckCount(Crew) then return false, "Drivers can only link to one entity." end
 				return true, "Crew linked."
@@ -240,7 +252,13 @@ CrewTypes.Register("Commander", {
 		},
 		acf_baseplate = {
 			CanLink = function(Crew) -- Called when a crew member tries to link to an entity
-				if CheckCount(Crew, "acf_baseplate") then return false, "Commanders can only link to one acf_baseplate." end
+				if CheckCount(Crew, "acf_baseplate") or CheckCount(Crew, "prop_physics") then return false, "Commanders can only link to one baseplate." end
+				return true, "Crew linked."
+			end
+		},
+		prop_physics = {
+			CanLink = function(Crew) -- Called when a crew member tries to link to an entity
+				if CheckCount(Crew, "prop_physics") or CheckCount(Crew, "acf_baseplate") then return false, "Commanders can only link to one baseplate." end
 				return true, "Crew linked."
 			end
 		}
@@ -292,7 +310,13 @@ CrewTypes.Register("Pilot", {
 		},
 		acf_baseplate = {
 			CanLink = function(Crew) -- Called when a crew member tries to link to an entity
-				if CheckCount(Crew, "acf_baseplate") then return false, "Pilot can only link to one acf_baseplate." end
+				if CheckCount(Crew, "acf_baseplate") or CheckCount(Crew, "prop_physics") then return false, "Pilot can only link to one baseplate." end
+				return true, "Crew linked."
+			end
+		},
+		prop_physics = {
+			CanLink = function(Crew) -- Called when a crew member tries to link to an entity
+				if CheckCount(Crew, "prop_physics") or CheckCount(Crew, "acf_baseplate") then return false, "Pilot can only link to one baseplate." end
 				return true, "Crew linked."
 			end
 		}

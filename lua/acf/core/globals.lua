@@ -106,6 +106,21 @@ do
 			return Float
 		end
 	end
+
+	function ACF.StringDataCallback(Callback)
+		local SettingData = ACF.GetWorkingSetting()
+		SettingData.Type = "String"
+
+		return function(_, Value)
+			Value = tostring(Value)
+
+			if Callback then
+				Callback(Value)
+			end
+
+			return Value
+		end
+	end
 end
 
 do -- ACF global vars
@@ -122,6 +137,8 @@ do -- ACF global vars
 	ACF.DefineSetting("LegalChecks",        true,   "Legality checks for ACF entities has been %s.", ACF.BooleanDataCallback())
 	ACF.DefineSetting("NameAndShame",       false,  "Console messages for failed legality checks have been %s.", ACF.BooleanDataCallback())
 	ACF.DefineSetting("VehicleLegalChecks", true,   "Legality checks for vehicles has been %s.", ACF.BooleanDataCallback())
+	ACF.DefineSetting("ScannerCanScan",     true,   "Legality scanner for vehicles has been %s.", ACF.BooleanDataCallback())
+	ACF.DefineSetting("ScannerWhyNot",      "<no reason provided>",   "Legality scanner disabled message has been set to '%s'.", ACF.StringDataCallback())
 
 	ACF.DefineSetting("GunsCanFire",        true,   "Gunfire has been %s.", ACF.BooleanDataCallback())
 	ACF.DefineSetting("GunsCanSmoke",       true,   "Gun sounds and particles have been %s.", ACF.BooleanDataCallback())
@@ -151,7 +168,7 @@ do -- ACF global vars
 
 	ACF.DefineSetting("AllowFunEnts",        true,   "Fun Entities have been %s.", ACF.BooleanDataCallback())
 	ACF.DefineSetting("AllowArbitraryParents", true,   "Arbitrary parenting has been %s.", ACF.BooleanDataCallback())
-	ACF.DefineSetting("AllowSpecialEngines", false,  "Special engines have been %s.", ACF.BooleanDataCallback())
+	ACF.DefineSetting("AllowSpecialEngines", true,  "Special engines have been %s.", ACF.BooleanDataCallback())
 	ACF.DefineSetting("ShowFunMenu",         true,   "The Fun Entities menu option has been %s.", ACF.BooleanDataCallback())
 	ACF.DefineSetting("AllowProcArmor",      false,  "Procedural armor has been %s.", ACF.BooleanDataCallback(function(Value)
 		ACF.GlobalFilter["acf_armor"] = not Value
@@ -334,7 +351,7 @@ do -- ACF global vars
 	ACF.GearEfficiency     = 0.95 -- The percentage of RPM efficiency kept when increasing the gear count
 	ACF.GearboxMassScale   = 3 -- The exponent to determine the gearbox's mass in proportion to its scale
 	ACF.GearboxTorqueScale = 3 -- The exponent to determine the gearbox's torque in proportion to its scale
-	ACF.TorqueMult         = 5 -- The arbitrary multiplier for the final amount of torque; TODO: we should probably implement this in a better way
+	ACF.TorqueMult         = 2 -- The arbitrary multiplier for the final amount of torque; TODO: we should probably implement this in a better way
 	ACF.MinGearRatio       = -10 -- The minimum value that a gear's ratio can be set to
 	ACF.MaxGearRatio       = 10 -- The maximum value that a gear's ratio can be set to
 	ACF.MaxCVTRatio        = 100 -- The maximum value that a CVT's ratio can be set to
@@ -354,8 +371,7 @@ if SERVER then
 	hook.Add("ACF_OnLoadPersistedData", "ACF Workshop Content", function()
 		if ACF.WorkshopContent then
 			resource.AddWorkshop("2183798463") -- Playermodel Seats
-			resource.AddWorkshop("3248769144") -- ACF-3 Base
-			resource.AddWorkshop("3248769787") -- ACF-3 Missiles
+			resource.AddWorkshop("3508782199") -- ICF-3 Base
 		end
 
 		if ACF.WorkshopExtras then

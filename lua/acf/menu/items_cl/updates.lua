@@ -84,7 +84,7 @@ end
 ACF.AddMenuItem(1, "#acf.menu.about", "#acf.menu.updates", "newspaper", CreateMenu)
 
 hook.Add("ACF_OnFetchRepository", "ACF Updates Menu", function(Name, Repo)
-	if Name ~= "ACF-3" then return end
+	if Name ~= "ICF-3" then return end
 
 	Repository = Repo
 

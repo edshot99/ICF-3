@@ -16,11 +16,11 @@ do -- Local repository version checking
 		if not file.Exists(Path .. "/.git/FETCH_HEAD", "GAME") then return end
 
 		local Fetch = file.Read(Path .. "/.git/FETCH_HEAD", "GAME")
-		local Start, End = Fetch:find("github.com[/]?[:]?[%w_-]+/")
+		local Start, End = Fetch:find("[/]?[:]?[%w_-]+/")
 
 		if not Start then return end -- File is empty
 
-		Data.Owner = Fetch:sub(Start + 11, End - 1)
+		Data.Owner = Fetch:sub(Start + 1, End - 1)
 	end
 
 	local function GetHeadsPath(Path, Data)
@@ -166,7 +166,7 @@ do -- Repository functions
 		return Data and Data[Realm]
 	end
 
-	ACF.AddRepository("ACF-Team", "ACF-3", "lua/autorun/acf_loader.lua")
+	ACF.AddRepository("IkarusHD", "ICF-3", "lua/autorun/acf_loader.lua")
 end
 
 do -- Branch functions

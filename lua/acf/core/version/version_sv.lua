@@ -1,5 +1,6 @@
 local ACF = ACF
 local Repos = ACF.Repositories
+local GitHub = true
 
 do -- Github data conversion
 	local string = string
@@ -37,8 +38,15 @@ do -- Github data conversion
 end
 
 do -- Branch version retrieval and version printing
-	local BranchLink = "https://api.github.com/repos/%s/%s/branches"
-	local Commits = "https://api.github.com/repos/%s/%s/commits?per_page=1&sha=%s"
+	local BranchLink
+	local Commits
+	if GitHub then
+		BranchLink = "https://api.github.com/repos/%s/%s/branches"
+		Commits = "https://api.github.com/repos/%s/%s/commits?per_page=1&sha=%s"
+	else
+		BranchLink = "https://git.groovyexpress.com/api/v1/repos/%s/%s/branches"
+		Commits = "https://git.groovyexpress.com/api/v1/repos/%s/%s/git/commits/%s"
+	end
 
 	local Messages = {
 		["Unable to check"] = {
@@ -82,7 +90,13 @@ do -- Branch version retrieval and version printing
 
 	local function LoadBranches(Data, Branches, List)
 		for _, Branch in ipairs(List) do
-			local SHA = Branch.commit.sha
+			local SHA
+			if GitHub then
+				SHA = Branch.commit.sha
+			else
+				SHA = Branch.commit.id
+			end
+
 			local Current = {
 				Name = Branch.name,
 				Code = "Git-" .. Branch.name .. "-" .. SHA:sub(1, 7),
@@ -93,7 +107,11 @@ do -- Branch version retrieval and version printing
 			ACF.StartRequest(
 				Commits:format(Data.Owner, Data.Name, SHA),
 				function(_, Commit)
-					GetBranchData(Data, Current, unpack(Commit))
+					if GitHub then
+						GetBranchData(Data, Current, unpack(Commit))
+					else
+						GetBranchData(Data, Current, Commit)
+					end
 				end
 			)
 		end

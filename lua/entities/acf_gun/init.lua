@@ -127,9 +127,11 @@ do -- Random timer crew stuff
 			end
 
 			local IsBlocked = (tr.Hit or (tr2 and tr2.Hit))
-			self.OverlayErrors.BreechCheck = IsBlocked and "Not enough space behind breech!\nHover with ACF menu tool" or nil
-			self:UpdateOverlay()
-			if IsBlocked then return 0.000001 end
+			if IsBlocked and not ACF.AllowArbitraryParents then
+				self.OverlayErrors.BreechCheck = IsBlocked and "Not enough space behind breech!\nHover with ACF menu tool" or nil
+				self:UpdateOverlay()
+				return 0.000001
+			end
 		end
 
 		return self.LoadCrewMod
@@ -744,6 +746,11 @@ do -- Metamethods --------------------------------
 				return false
 			end
 
+			if self.OverlayErrors.BreechCheck then
+				ACF.DisableEntity(self, "Breech Check", "Not enough space behind breech!\nHover over gun with ACF menu tool to fix.", 5)
+				return false
+			end
+
 			if self.TurretLink and IsValid(self.Turret) then -- Special link to a turret, will block the gun from firing if the gun is not aligned with the turret's target angle
 				local Turret = self.Turret
 				if not Turret.Active then return false end
@@ -945,6 +952,7 @@ do -- Metamethods --------------------------------
 					if Manual then -- Automatics don't change their rate of fire
 						WireLib.TriggerOutput(self, "Reload Time", IdealTime / eff)
 						WireLib.TriggerOutput(self, "Rate of Fire", 60 / (IdealTime / eff))
+						self.ReloadTime = IdealTime / eff
 					end
 					return eff
 				end
@@ -1032,6 +1040,7 @@ do -- Metamethods --------------------------------
 				local ReloadLoop = function()
 					local eff = self:UpdateLoadMod()
 					if Manual then WireLib.TriggerOutput(self, "Mag Reload Time", IdealTime / eff) end
+					self.MagReload = IdealTime / eff
 					return eff
 				end
 

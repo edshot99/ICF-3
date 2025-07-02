@@ -13,6 +13,10 @@ function ACF.__OnDefinedSetting(Key, Default, TextWhenChanged, Callback)
 
 		ACF[Key] = Value
 
+		-- kludge
+		if Key == "ScannerCanScan" then ACF.Scanning.canScan = Value end
+		if Key == "ScannerWhyNot" then ACF.Scanning.whyNot = Value end
+
 		if CLIENT and not IsValid(Player) then return end
 
 		if TextWhenChanged then

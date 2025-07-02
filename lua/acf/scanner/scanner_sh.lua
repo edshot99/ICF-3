@@ -11,6 +11,9 @@ end
 local scanning = {}
 ACF.Scanning = scanning
 
+scanning.canScan = true
+scanning.whyNot = "<no reason provided>"
+
 local net_ReadBool = net.ReadBool
 local net_ReadEntity = net.ReadEntity
 local net_ReadString = net.ReadString
@@ -279,6 +282,7 @@ if SERVER then
         if not IsValid(targetPlayer) then scanning.EndScanning() return end
         if not hook.Run("ACF_PreBeginScanning", playerScanning) then return end
         if playerScanning:InVehicle() then return end
+        if not scanning.canScan then return end
 
         scanningPlayers[playerScanning] = {
             target = targetPlayer,
@@ -937,8 +941,8 @@ if CLIENT then
             Derma_Message("You cannot scan a target while being in a vehicle. Exit the vehicle, then try again.", "Scanning Blocked", "OK")
         return end
         local canScan, whyNot = hook.Run("ACF_PreBeginScanning", LocalPlayer())
-        if not canScan then
-            Derma_Message("Scanning has been blocked by the server: " .. (whyNot or "<no reason provided>"), "Scanning Blocked", "OK")
+        if not canScan or not scanning.canScan then
+            Derma_Message("Scanning has been blocked by the server: " .. (whyNot or scanning.whyNot), "Scanning Blocked", "OK")
         return end
 
         NetStart("UpdatePlayer")
