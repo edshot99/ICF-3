@@ -52,4 +52,6 @@ local function CreateMenu(Menu)
 	end
 end
 
+CreateMenu = CreateMenu
+
 --ACF.AddMenuItem(301, "#acf.menu.about", "#acf.menu.contact", "feed", CreateMenu)

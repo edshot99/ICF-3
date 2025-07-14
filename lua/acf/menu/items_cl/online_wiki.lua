@@ -13,4 +13,6 @@ local function CreateMenu(Menu)
 	Menu:AddHelp("#acf.menu.wiki.wip_notice")
 end
 
+CreateMenu = CreateMenu
+
 --ACF.AddMenuItem(101, "#acf.menu.about", "#acf.menu.wiki", "book_open", CreateMenu)
